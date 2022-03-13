@@ -57,7 +57,7 @@ function drawImg(ctx, img, x, y) {
   ctx.drawImage(img, x * CELL_SIZE, y * CELL_SIZE, CELL_SIZE, CELL_SIZE);
 }
 
-//score
+//visible score board
 function drawScore(snake) {
   let scoreCanvas;
   scoreCanvas = document.getElementById("scoreBoard");
@@ -70,20 +70,19 @@ function drawScore(snake) {
   scoreCtx.fillText("score", 5, 20)
 }
 
-//speed
+//visible speed board
 function drawSpeed() {
   let speedCanvas;
   speedCanvas = document.getElementById("speedBoard");
   let scoreCtx = speedCanvas.getContext("2d");
 
   scoreCtx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
-  scoreCtx.font = "20px Arial";
-  scoreCtx.fillText(MOVE_INTERVAL, 10, speedCanvas.scrollHeight / 2);
-  scoreCtx.fillText("speed", 5, 15);
-  scoreCtx.fillText("MS", 15, 70);
+  scoreCtx.font = "25px Arial";
+  scoreCtx.fillText(MOVE_INTERVAL, 10, speedCanvas.scrollHeight / 1.5);
+  scoreCtx.fillText("speed", 5, 20);
 }
 
-//life
+//visible life board
 function drawLife(snake) {
   let lifeCanvas;
   lifeCanvas = document.getElementById("lifeBoard");
