@@ -97,7 +97,7 @@ function drawLife(snake) {
 
 function levelUp(snake) {
   let up = new Audio("assets/sound1.mp3");
-  if (snake.score === 2) {
+  if (snake.score === 5) {
     up.loop = false;
     up.play();
     alert("LEVEL 2");
